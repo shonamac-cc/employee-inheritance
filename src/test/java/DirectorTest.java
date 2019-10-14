@@ -20,8 +20,14 @@ public class DirectorTest {
     }
 
     @Test
+    public void cantRaiseSalary(){
+        director.raiseSalary(-100);
+        assertEquals(90000, director.getSalary(), 0.01);
+    }
+
+    @Test
     public void canPayBonus(){
-        assertEquals(900, director.payBonus(), 0.01);
+        assertEquals(1800, director.payBonus(), 0.01);
     }
 
     @Test
