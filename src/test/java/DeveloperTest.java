@@ -24,4 +24,10 @@ public class DeveloperTest {
     public void canPayBonus(){
         assertEquals(200, developer.payBonus(), 0.01);
     }
+
+    @Test
+    public void cannotChangeNameIfNullValue(){
+        developer.setName(null);
+        assertEquals("jon boy", developer.getName());
+    }
 }
